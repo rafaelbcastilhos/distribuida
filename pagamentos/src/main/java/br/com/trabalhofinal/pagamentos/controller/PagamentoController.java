@@ -10,6 +10,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/pagamentos")
@@ -20,6 +21,11 @@ public class PagamentoController {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @GetMapping()
+    public List<PagamentoDto> listarTodos() {
+        return service.obterTodos();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<PagamentoDto> detalhar(@PathVariable @NotNull Integer id) throws Exception {

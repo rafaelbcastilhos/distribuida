@@ -1,6 +1,9 @@
 # Trabalho final
 Aplicação de pedidos e pagamentos genéricos utilizando SpringBoot utilizando Java 8 e RabbitMQ
 
+Componentes da arquitetura:
+![Arquitetura](https://raw.githubusercontent.com/rafaelbcastilhos/distribuida/main/arquitetura.png)
+
 ## Message-Broker (RabbitMQ): 
 Atua como intermediário na gestão do envio e recebimento das mensagens, utilizando AMQP (Advanced Messaging Queue Protocol).
 

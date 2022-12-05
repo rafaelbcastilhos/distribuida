@@ -8,6 +8,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PagamentoService {
@@ -18,6 +20,12 @@ public class PagamentoService {
 
     @Autowired
     private PedidoClient pedido;
+
+    public List<PagamentoDto> obterTodos() {
+        return pagamentos.values().stream()
+                .map(p -> modelMapper.map(p, PagamentoDto.class))
+                .collect(Collectors.toList());
+    }
 
     public PagamentoDto obterPorId(Integer id) throws Exception {
         Pagamento pagamento = pagamentos.get(id);
