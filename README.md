@@ -1,5 +1,5 @@
 # Trabalho final
-Aplicação de pedidos e pagamentos genéricos utilizando SpringBoot utilizando Java 8 e RabbitMQ
+A aplicação desenvolvida está inserida no contexto de um comércio eletrônico, onde é possível manipular pedidos e pagamentos, utilizando dados genéricos para simular a entrada.
 
 Componentes da arquitetura:
 ![Arquitetura](https://raw.githubusercontent.com/rafaelbcastilhos/distribuida/main/arquitetura.png)
@@ -28,7 +28,7 @@ mvn spring-boot:run
 ```
 
 ## Gateway: 
-Projeto que atua como API Gateway, também utilizando ferramentas do Spring Cloud. Centraliza entrada dos diferentes microsserviços para o cliente (Transparência). Após a sua execução, o acesso dos microsserviços é dado por meio do endereço http://localhost:8082
+Camada que atua como API Gateway, também utilizando ferramentas do Spring Cloud. Centraliza entrada dos diferentes microsserviços para o cliente. Após a sua execução, o acesso dos microsserviços é dado por meio do endereço http://localhost:8082
 Pode ser construído com:
 ```
 mvn clean package
@@ -76,7 +76,7 @@ E executado com:
 mvn spring-boot:run
 ```
 
-O microsserviço de pedidos, pode possuir mais de uma instância, para isso é necessário executar em mais de um terminal (Escalabilidade/Balanceamento de carga). Para verificar em qual instância está sendo executado, é necessário requisitar o endereço http://localhost:8082/pedidos-ms/pedidos/porta
+O microsserviço de pedidos, pode possuir mais de uma instância, para isso é necessário executar em mais de um terminal. Para verificar em qual instância está sendo executado, é necessário requisitar o endereço http://localhost:8082/pedidos-ms/pedidos/porta
 
 O exemplo de corpo na requisição de http://localhost:8082/pedidos-ms/pedidos é:
 ```
