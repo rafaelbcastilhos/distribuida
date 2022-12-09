@@ -91,3 +91,17 @@ O exemplo de corpo na requisição de http://localhost:8082/pedidos-ms/pedidos �
     }]
 }
 ```
+## Clients: 
+Os clients tem como objetivo interagir com o sistema, do ponto de vista de usuário final ou aplicação client consumidora do sistema, e também validar a propriedade de heterogeneidade do ecossistema desenvolvido, através da interação com clients desenvolvidos em diferentes linguagens. 
+
+O client principal, em python, tem como objetivo permitir adicionar pedidos, consultar pedidos, adicionar pagamentos e consultar pagamentos. Pode ser executado através de:
+
+```
+python3 client.py
+```
+
+O client secundário, em golang, tem como objetivo somente retorna todos os pedidos e pagamentos já cadastrados no sistema, e pode ser executado através de:
+
+```
+go run client.go
+```
