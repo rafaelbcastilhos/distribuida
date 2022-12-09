@@ -100,7 +100,7 @@ O client principal, em python, tem como objetivo permitir adicionar pedidos, con
 python3 client.py
 ```
 
-O client secundário, em golang, tem como objetivo somente retorna todos os pedidos e pagamentos já cadastrados no sistema, e pode ser executado através de:
+O client secundário, em golang, tem como objetivo somente retornar todos os pedidos e pagamentos já cadastrados no sistema, e pode ser executado através de:
 
 ```
 go run client.go
