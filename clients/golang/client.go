@@ -18,9 +18,9 @@ func main() {
 
 	fmt.Println(string(responseData))
 
-	fmt.Println(string("Todos os pagamentos no sistema:"))
+	fmt.Println(string("\nTodos os pagamentos no sistema:\n"))
 
-	api2 := "http://localhost:8082/pagamentos-ms/pagamentos\n"
+	api2 := "http://localhost:8082/pagamentos-ms/pagamentos"
 
 	response2, _ := http.Get(api2)
 
