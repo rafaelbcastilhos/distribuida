@@ -1,4 +1,4 @@
-# Trabalho final
+# Arquitetura distribuída para pedidos e pagamentos
 A aplicação desenvolvida está inserida no contexto de um comércio eletrônico, onde é possível manipular pedidos e pagamentos, utilizando dados genéricos para simular a entrada.
 
 Componentes da arquitetura:
